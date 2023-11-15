@@ -1,0 +1,143 @@
+a{
+	color: #900;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #666;
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+}
+
+/********** Menu width: 760px; **********/
+
+#menu{
+	/*background: url('img/barra_menu.jpg') top repeat-x;*/
+	position:relative;
+	height: 39px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 6px 0 0;
+	z-index: 11;
+        
+}
+
+.moduletable_topmenu{
+   padding:0;
+   color: #333;
+   height: 30px;
+   margin: 0;
+   display: inline-block;
+
+}
+
+.moduletable_topmenu h3 {
+   background:#666;
+   color:#fff;
+   padding:0.25em 0;
+   text-align:center;
+   font-size:1.1em;
+   margin:0;
+}
+
+.moduletable_topmenu ul{
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.moduletable_topmenu li{
+   margin: 0px 6px;
+   float: left;
+   font-size: 11px;
+}
+
+.moduletable_topmenu li ul {
+   position: absolute;
+   width: 135px;
+   left: -999em;
+   border-bottom: none;
+   top: 30px;
+   padding-top:10px;
+   font-size: 11px;
+}
+
+.moduletable_topmenu li:hover ul {
+   left: auto;
+   font-size: 11px;
+}
+
+.moduletable_topmenu li ul li {
+   width: 135px;
+   padding: 0;
+   border-bottom: 1px solid #DDD;
+   font-size: 11px;
+}
+
+.moduletable_topmenu li a{
+   display: block;
+   padding: 5px;
+   /*background: url('../img/barra_menu.jpg') top no-repeat;*/
+   color: #333;
+   text-decoration: none;
+   font-size: 11px;
+   _font-size: 13px;
+   _font-weight: bold;
+}
+
+html>body .moduletable_topmenu li a {
+	font-size: 13px;
+    font-weight: bold;
+	width: auto;
+}
+
+.moduletable_topmenu li a:hover,a#active_menu:link,a#active_menu:visited{
+   color: #666;
+   text-decoration: none;
+   font-size: 13px;
+   font-weight: bold;
+}
+
+.moduletable_topmenu li ul li a {
+    width: 125px;
+    background-color: #00457E;
+    color: #333;
+	font-size: 11px;
+    font-weight: normal;
+}
+
+.moduletable_topmenu li ul li a:hover {
+   background-color: #DDD;
+   color: #666;
+   font-size: 11px;
+   font-weight: normal;
+}
+
+.moduletable_topmenu li:hover ul, .moduletable_topmenu li.sfhover ul {
+   left: auto;
+   font-size: 11px;
+}
+
+.moduletable_topmenu ul li.active a {
+   color: #C00;
+   text-decoration: none;
+}
+.moduletable_topmenu li.parent.active a {
+   color: #C00;
+   text-decoration: none;
+}
+.moduletable_topmenu li.parent.active a:hover {
+   color: #666;
+}
+
+.moduletable_topmenu li.parent.active ul li a {
+   color: #333;
+   text-decoration: none;
+}
+.moduletable_topmenu li.parent.active ul li a:hover {
+   color: #666;
+   text-decoration: none;
+}

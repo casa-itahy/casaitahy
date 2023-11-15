@@ -1,0 +1,16 @@
+[12-Jan-2023 18:56:04 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/noticias.php on line 18
+[12-Jan-2023 18:56:04 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/noticias.php on line 32
+[28-Aug-2023 18:58:13 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/noticias.php on line 18
+[28-Aug-2023 18:58:13 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/noticias.php on line 32
+[18-Oct-2023 05:53:13 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 44
+[18-Oct-2023 05:53:13 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 44
+[18-Oct-2023 05:53:13 America/Fortaleza] PHP Warning:  mkdir(): File exists in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 48
+[18-Oct-2023 05:53:54 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 44
+[18-Oct-2023 05:53:54 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 44
+[18-Oct-2023 05:53:54 America/Fortaleza] PHP Warning:  mkdir(): File exists in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 48
+[18-Oct-2023 06:48:07 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 44
+[18-Oct-2023 06:48:07 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 44
+[18-Oct-2023 06:48:07 America/Fortaleza] PHP Warning:  mkdir(): File exists in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 48
+[18-Oct-2023 06:48:14 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 44
+[18-Oct-2023 06:48:14 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 44
+[18-Oct-2023 06:48:14 America/Fortaleza] PHP Warning:  mkdir(): File exists in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 48
