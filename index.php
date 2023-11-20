@@ -21,7 +21,7 @@ include_once('php/index.php'); ?>
         },
                 "description": "<?php if(!empty($seoDescription)){ echo $seoDescription; } else { echo $mostraSeo[0]['descricao']; } ?>",
                 "name": "<?php if (!empty($seoTitle)){ echo $seoTitle; } else { echo $config['titulo']; } ?>",
-        "email":"mailto:maya@agenciamaya.com.br",
+        "email":"mailto:joaore1000@gmail.com",
         "telephone": "55<?php echo preg_replace('/[^0-9]/', '', $config['fone1']); ?>",
         "logo": "templates/img/logo-casa-itahy.png",
         "image": "templates/img/logo-casa-itahy.png",
@@ -267,7 +267,7 @@ include_once('php/index.php'); ?>
     <div class="rodape-baixo text-center">
         <div class="container">
             <p><?php echo $config['rodape']; ?></p>
-            <a class="maya" rel="external" href="https://www.agenciamaya.com.br/" title="Criação de Sites e Marketing Digital - Agência Maya" target="_blank">Criação de Sites e Marketing Digital - Agência Maya</a>
+            <a class="maya" rel="external" href="https://www.linkedin.com/in/joao-re/" title="Criação de Sites - João Ré Desenvolvedor" target="_blank">Criação de Sites - João Ré Desenvolvedor</a>
         </div>
     </div>
 
