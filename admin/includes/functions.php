@@ -48,7 +48,8 @@ function getAtributosItens($id){
     return query("select txt_atributo,status,atributo_nome FROM atributos_status WHERE modulo_id=$id");
 }
 
-function getStatusAtributo($atributos_itens,$atributo_txt){    
+function getStatusAtributo($atributos_itens,$atributo_txt){   
+	
     $achou=false;
     foreach($atributos_itens as $atributo_item){
         if($atributo_item['txt_atributo']==$atributo_txt && $atributo_item['status']==1){
