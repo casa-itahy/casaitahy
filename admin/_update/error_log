@@ -14,3 +14,15 @@
 [18-Oct-2023 06:48:14 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 44
 [18-Oct-2023 06:48:14 America/Fortaleza] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 44
 [18-Oct-2023 06:48:14 America/Fortaleza] PHP Warning:  mkdir(): File exists in /home2/ihome078/casaitahy/admin/_update/upload_mult_file_docs.php on line 48
+[23-Feb-2024 11:29:28 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 11:29:48 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 11:30:48 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 12:46:32 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 12:46:46 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 12:47:31 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 13:21:55 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 19:55:00 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 19:55:17 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 20:00:40 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 20:29:39 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796
+[23-Feb-2024 20:31:08 America/Fortaleza] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home2/ihome078/casaitahy/admin/php/class.upload.php on line 2796

@@ -7,9 +7,7 @@
 
 	//arquivo de idiomas
 	//include_once('lang/lang.php');
-	//$server_admin = json_encode($_SERVER['SERVER_ADMIN']);
-	//echo('<script>console.log('.$server_admin.')</script>');
-
+	
 	if(stripos($_SERVER['SERVER_ADMIN'], "localhost") !== false){
 		#Local#
 		$raiz = explode("/", $_SERVER['REQUEST_URI']);
@@ -18,7 +16,6 @@
 		#online#
 		$base = $_SERVER['HTTP_HOST']."/";
 	}
-	
 	
 	define ("IMAGENS","admin/imagens/");
 
