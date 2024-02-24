@@ -150,14 +150,10 @@ if ($erro == false) {
 } else {
     $msg = "Operação realizada com sucesso!";
 }
-// Fechar a conexão com o banco de dados
-if (!mysqli_close($conn)) {
-    // Tratar erro ao fechar conexão
-    echo "Erro ao fechar a conexão com o banco de dados.";
-    exit;
+if (isset($conn)) { // Modificado aqui
+    @((is_null($___mysqli_res = mysqli_close($conn))) ? false : $___mysqli_res);
 }
 
-// Redirecionar após fechar a conexão
 if (!headers_sent($filename, $linenum)) {
     header('Location: ../index.php?pag=' . $pag . '&tipo=p&msg=' . $msg);
     exit;
