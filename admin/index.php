@@ -262,9 +262,7 @@ $css = '';
                         } else {
                             
                             foreach ($_SESSION['pages'] as $key => $paginas) {
-                                echo "<pre>";
-                                echo $paginas['pag_tab_nome'];
-                                echo "</pre>";
+                                
                                 if ($pag == $paginas['pag_tab_id']) {
                                     $_SESSION['pag_id_atual'] = $paginas['pag_tab_id'];
                                     @session_write_close();

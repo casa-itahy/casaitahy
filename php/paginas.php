@@ -1,13 +1,17 @@
 <?php
 
 	if (!empty($pag_id)) {
+
+		
 		$pagina = query("SELECT * FROM paginas WHERE id=".$pag_id);
+		
 	    if (count($pagina) < 1) {
 	    	$pagina = false;
 	    } else {
 	    	$pagina = $pagina['0'];
 	    	$pagina['conteudo'] = imagemEditor($pagina['conteudo']);
 	    }
+
 
 		if($pag_id == 1) {
 			$retorno = query("SELECT titulo, title, metad, conteudo, imagem, status FROM paginas WHERE tipo = 5 AND id = 16 OR id = 17 ORDER BY id ASC");
@@ -18,7 +22,19 @@
 			}
 
 		    include_once "templates/empresa.php";
-		} else if($pag_id == 4) {
+		} else if($pag_id == 55) {
+			$retorno = query("SELECT titulo, title, metad, conteudo, imagem, status FROM paginas WHERE tipo = 5 AND id = 56 OR id = 55 ORDER BY id ASC");
+			echo "<pre>";
+			echo print_r($retorno);
+			echo "</pre>";
+			if (empty($retorno)) {
+				$textos = false;
+			} else {
+				$textos = $retorno;
+			}
+
+		    include_once "templates/avaliar-imovel.php";
+		}else if($pag_id == 4) {
 			$retorno = query("SELECT titulo, title, metad, conteudo, imagem, status FROM paginas WHERE tipo = 5 AND id = 12 ORDER BY id ASC");
 			if (empty($retorno)) {
 				$textos = false;

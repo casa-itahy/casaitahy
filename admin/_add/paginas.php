@@ -30,8 +30,9 @@ if ($user_id == 1) {
 
 }//AND (modu.pag_tab_id!=0 OR modu.id=5)
 
-$tipos = query($sql);
 
+$tipos = query($sql);
+echo "<p>". print_r($sql) ."</p>";
 $atributos_itens = getAtributosItens(11); //11 páginas
 
 ?>

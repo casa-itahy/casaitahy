@@ -1,4 +1,6 @@
-<?php if ($pagina) { ?>
+<?php if ($pagina) { 
+
+    ?>
     <div class="topo-paginas">
         <div class="container text-center">
             <h2><?php echo $pagina['titulo']; ?></h2>

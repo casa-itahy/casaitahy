@@ -107,7 +107,7 @@ if ($q == '' || $q == true) {
 }
 
 if (!headers_sent($filename, $linenum)) {
-    header('Location: ../index.php?pag=1' . $volta_altera . '&msg=' . $msg);
+    header('Location: ../index.php?pag=1' . $volta_altera . '&msg=' . $msg . '&debug='.$link);
     exit;
 }
 ?>

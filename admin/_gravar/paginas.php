@@ -6,11 +6,10 @@ include("../php/imgCaminho.php");
 include("../../php/plugins/seo.php");
 
 extract($_POST);
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
 
 $modulo = query("SELECT orientacao, tam_principal, tam_thumb FROM modulos WHERE pag_tab_id='" . $pag . "';");
+
+
 
 $descricaoSite = query("SELECT descricao FROM config WHERE id = 1");
 
@@ -115,7 +114,7 @@ foreach ($idiomas as $idioma) {
             );
         }
         $all_query_ok = $consulta->transaction($q);
-        if ($all_query_ok) {
+        if ($all_query_ok == 1) {
             $msg = "<p>Os dados foram salvos!</p>";
             $pagina_id = query("SELECT MAX(id) as id FROM $tabela");
             $pagina_id = $pagina_id[0]['id'];
@@ -155,7 +154,7 @@ if (isset($conn)) { // Modificado aqui
 }
 
 if (!headers_sent($filename, $linenum)) {
-    header('Location: ../index.php?pag=' . $pag . '&tipo=p&msg=' . $msg);
+    header('Location: ../index.php?pag=' . $pag . '&tipo=p&msg=' . $msg . '&link='.$all_query_ok);
     exit;
 }
 
