@@ -32,7 +32,6 @@ if ($user_id == 1) {
 
 
 $tipos = query($sql);
-echo "<p>". print_r($sql) ."</p>";
 $atributos_itens = getAtributosItens(11); //11 páginas
 
 ?>

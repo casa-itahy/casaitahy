@@ -10,12 +10,14 @@
 	
 	if(stripos($_SERVER['SERVER_ADMIN'], "localhost") !== false){
 		#Local#
+		
 		$raiz = explode("/", $_SERVER['REQUEST_URI']);
 		$base = $_SERVER['HTTP_HOST']."/".$raiz['1']."/";
 	} else {
 		#online#
 		$base = $_SERVER['HTTP_HOST']."/";
 	}
+
 	
 	define ("IMAGENS","admin/imagens/");
 
