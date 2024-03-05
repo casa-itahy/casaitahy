@@ -1,4 +1,15 @@
 <?php if ($pagina) { ?>
+
+    <div class="topo-paginas topo-imoveis">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 anime">
+                    <h2><?php echo $pagina['titulo']; ?></h2>
+                    <h1><?php echo $pagina['subtitulo']; ?></h1>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="alinha-titulo-sombra sombra-topo-pagina">
         <div class="titulo-sombra">Avalie Grátis</div>
     </div>

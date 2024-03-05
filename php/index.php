@@ -8,13 +8,12 @@
 	//arquivo de idiomas
 	//include_once('lang/lang.php');
 	
-	if(stripos($_SERVER['SERVER_ADMIN'], "localhost") !== false){
-		#Local#
-		
+	if ($_SERVER['HTTP_HOST'] === 'localhost' || $_SERVER['HTTP_HOST'] === '127.0.0.1') {
+		# Local #
 		$raiz = explode("/", $_SERVER['REQUEST_URI']);
 		$base = $_SERVER['HTTP_HOST']."/".$raiz['1']."/";
 	} else {
-		#online#
+		# Online #
 		$base = $_SERVER['HTTP_HOST']."/";
 	}
 
