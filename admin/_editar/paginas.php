@@ -11,7 +11,6 @@ $id_old = $id;
 
 $valores = explode('-', $id);
 
-pr($user_id);
 if (isset($valores[1])) {
     $pai = $valores[0];
     $filho = $valores[1];

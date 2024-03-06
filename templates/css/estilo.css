@@ -1020,6 +1020,67 @@ body h2.titulo-centralizado, body h1.titulo-centralizado{
 	display: none;
 }
 
+.imagem-pagina-calculadora{
+	text-align: right;
+	position: relative;
+	padding-bottom: 20px;
+	padding-left: 52px;
+	margin-left: 58px;
+	z-index: 5;
+	margin-bottom: 0px;
+}
+
+.imagem-pagina-calculadora img{
+	position: relative;
+	z-index: 2;
+}
+
+.imagem-pagina-calculadora:before{
+	width: 407px;
+	height: 254px;
+	content: '';
+	background-image: url(../img/fundo-diferenciais.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: -16px;
+}
+
+.imagem-pagina-calculadora-baixo{
+	float: left;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	padding: 50px 0 0 120px;
+	position: relative;
+	margin-top: 0px;
+}
+
+.imagem-pagina-calculadora-baixo:before{
+	background-color: var(--cor-3);
+	content: '';
+	display: block;
+	position: absolute;
+	left: 35px;
+	top: 0;
+	bottom: -53px;
+	width: 151px;
+}
+
+.imagem-pagina-calculadora-baixo img{
+	position: relative;
+	z-index: 1;
+	max-width: 271px;
+	right: 40px;
+}
+
+.metodo-personalizado > ol > li{
+	font-size: 27px;
+}
+
+
 .imagem-pagina-empresa{
 	text-align: right;
 	position: relative;
@@ -1034,6 +1095,7 @@ body h2.titulo-centralizado, body h1.titulo-centralizado{
 	position: relative;
 	z-index: 2;
 }
+
 
 .imagem-pagina-empresa:before{
 	width: 370px;
