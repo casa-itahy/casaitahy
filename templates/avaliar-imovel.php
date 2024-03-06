@@ -71,7 +71,7 @@
 
         <div class="texto-quem-somos-baixo anime row">
             <div class="col-sm-4">
-                <div class="d-flex flex-column">
+                <div class="d-flex flex-column text-center">
                     <img src="admin/imagens/editor/Calculator.png" class="mx-auto mb-3" alt="calculadora" width="60" height="60">
                     <p>
                         Calculadora baseada em dados reais de anúncios
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="d-flex flex-column">
+                <div class="d-flex flex-column text-center">
                     <img src="admin/imagens/editor/Badge.png" class="mx-auto mb-3" alt="badge" width="60" height="60">
                     <p>
                         Avaliação de especialista que considera fatores
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="d-flex flex-column">
+                <div class="d-flex flex-column text-center">
                     <img src="admin/imagens/editor/Hand-shake.png" class="mx-auto mb-3" alt="hand-shake" width="60" height="60">
                     <p>
                         Compromisso em oferecer uma avaliação precisa que
@@ -118,7 +118,7 @@
 
             <div class="row mt-5">
                 <div class="col-sm-12 text-center">
-                    <a href="<?php echo $linkContato; ?>" class="btn btn-outline-dark">Fale com Especialista</a>
+                    <a href="<?php echo $linkWhatsapp; ?>" class="btn btn-outline-dark">Fale com Especialista</a>
                 </div>
             </div>
             
