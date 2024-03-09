@@ -262,10 +262,10 @@ include_once('php/index.php'); ?>
         </div>
     </footer>
     <div class="rodape-baixo text-center">
-        <!-- <div class="container">
-            <p><?php //echo $config['rodape']; ?></p>
-            <a class="maya" rel="external" href="https://www.linkedin.com/in/joao-re/" title="Criação de Sites - João Ré Desenvolvedor" target="_blank">Criação de Sites - João Ré Desenvolvedor</a>
-        </div> -->
+        <div class="container">
+            <p><?php echo $config['rodape']; ?></p>
+            <!-- <a class="maya" rel="external" href="https://www.linkedin.com/in/joao-re/" title="Criação de Sites - João Ré Desenvolvedor" target="_blank">Criação de Sites - João Ré Desenvolvedor</a> -->
+        </div>
     </div>
 
     <?php if (!empty($linkWhatsapp)): ?>
