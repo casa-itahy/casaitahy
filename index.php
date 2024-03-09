@@ -72,10 +72,7 @@ include_once('php/index.php'); ?>
     <link rel="apple-touch-icon" sizes="144x144" href="templates/img/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="templates/img/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="templates/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="templates/img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="templates/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="templates/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="templates/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png"  href="templates/img/favicon.webp">
     <link rel="manifest" href="templates/img/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#FAA41A">
     <meta name="msapplication-TileImage" content="templates/img/favicon/ms-icon-144x144.png">

@@ -112,7 +112,7 @@
         <div class="texto-quem-somos-baixo anime mb-5">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <?php echo $textos[3]['conteudo']; ?>
+                    <?php echo $textos[2]['conteudo']; ?>
                 </div>
             </div>
 
