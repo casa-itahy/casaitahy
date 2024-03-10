@@ -8,7 +8,7 @@
                         <?php echo $pagina['titulo']; ?>
                     </h2>
                     <h1>
-                        <?php echo $pagina['title']; ?>
+                        <?php echo $pagina['metad']; ?>
                     </h1>
                 </div>
             </div>
@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row mt-5 pt-3">
             <div class="col-lg-5 col-md-5 anime">
-                <h2 class="texto-laranja">
+                <h2 class="texto-laranja mb-5">
                     <?php echo $textos[0]['titulo']; ?>
                 </h2>
                 <?php echo $textos[0]['conteudo']; ?>
