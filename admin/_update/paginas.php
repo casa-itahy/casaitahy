@@ -6,10 +6,6 @@ include("../../php/plugins/seo.php");
 
 extract($_POST);
 
-echo "<pre>";
-print_r($_POST) ;
-echo "</pre>";
-
 $idiomas = query("SELECT * FROM idiomas WHERE status=1");
 $modulo = query("SELECT orientacao, tam_principal, tam_thumb FROM modulos WHERE pag_tab_id='$pag'");
 
