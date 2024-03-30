@@ -5,25 +5,25 @@ include("../php/funcoes.php");
 include("../php/imgCaminho.php");
 include("../../php/plugins/seo.php");
 
-extract($_POST);
+extract($_POST); //extrai o formulario de incluir pagina
 
+//busca a configurações de img do modulo pelo o id do modulo passado pelo form no $pag. Nesse caso o id do modulo é 1
 $modulo = query("SELECT orientacao, tam_principal, tam_thumb FROM modulos WHERE pag_tab_id='" . $pag . "';");
-
-
 
 $descricaoSite = query("SELECT descricao FROM config WHERE id = 1");
 
 $idiomas = query("SELECT * FROM idiomas WHERE status=1");
 
-/* Procura a ultima posi��o */
-
+/* Procura a ultima posição */
 $posicao = ultimaPosicao($tabela);
+// acrescenta mais 1 na posição
 $posicao = $posicao + 1;
 
 /* Envia a imagem para redimensionamento */
+pr($_FILES['imagem']);
 $imagemUP = isset($_FILES['imagem']) ? $_FILES['imagem'] : "NULL";
 if (!empty($imagemUP['name']) && $imagemUP['error'] == 0) {
-    $imagem = gravaImagem($imagemUP, $tabela, $modulo['0']['tam_principal'], $modulo[0]['tam_thumb'], $modulo[0]['orientacao']);
+    $imagem = gravaImagem($imagemUP, $tabela, $modulo[0]['tam_principal'], $modulo[0]['tam_thumb'], $modulo[0]['orientacao']);
     if (!$imagem) {
         $imagem = '';
     }
@@ -33,8 +33,6 @@ if (!empty($imagemUP['name']) && $imagemUP['error'] == 0) {
 
 
 $valores = explode('-', $pai);
-
-
 
 if (isset($valores[1])) {
     $pai = $valores[0];
@@ -130,7 +128,8 @@ foreach ($idiomas as $idioma) {
             gravar($gravaLink);
 
         } else {
-            $erro = "<p>Ocorreu um problema durante a gravação no banco de dados.</p><p>Caso continue o problema, comunique seu administrador.</p>";
+            $erro = false;
+            $msg = "<p>Ocorreu um problema durante a gravação no banco de dados.</p><p>Caso continue o problema, comunique seu administrador.</p>";
         }
     } else {
         if ($pagina_id != 0) {
@@ -145,7 +144,7 @@ foreach ($idiomas as $idioma) {
 
 }
 if ($erro == false) {
-    $msg = "Erro ao realizar a operação!";
+    $msg += " ----- Erro ao realizar a operação!";
 } else {
     $msg = "Operação realizada com sucesso!";
 }
@@ -154,7 +153,7 @@ if (isset($conn)) { // Modificado aqui
 }
 
 if (!headers_sent($filename, $linenum)) {
-    header('Location: ../index.php?pag=' . $pag . '&tipo=p&msg=' . $msg . '&link='.$all_query_ok);
+    header('Location: ../index.php?pag=' . $pag . '&tipo=p&msg=' . $msg . '&link='.$link);
     exit;
 }
 

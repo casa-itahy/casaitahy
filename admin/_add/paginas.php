@@ -2,13 +2,13 @@
 
 
 include_once("php/sessao.php");
-$user_id = $_SESSION['id'];
+$user_id = $_SESSION['id']; // user ID for adm is 11
 session_write_close();
 
 
 include_once("includes/functions.php");
 
-$idiomas = query("select sigla,nome FROM idiomas WHERE status=1");
+$idiomas = query("select sigla,nome FROM idiomas WHERE status=1"); //idioma portugues
 
 
 if ($user_id == 1) {
@@ -31,7 +31,7 @@ if ($user_id == 1) {
 }//AND (modu.pag_tab_id!=0 OR modu.id=5)
 
 
-$tipos = query($sql);
+$tipos = query($sql); // lista de tipos de conteudo que vai ser adiciona na página
 $atributos_itens = getAtributosItens(11); //11 páginas
 
 ?>

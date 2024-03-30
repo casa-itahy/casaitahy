@@ -5,7 +5,7 @@
 			if(stripos($_SERVER['SERVER_ADMIN'], "localhost") !== false){
 				#Local#
 				$raiz = explode("/", $_SERVER['REQUEST_URI']);
-				$base = $_SERVER['HTTP_HOST']."/".$raiz['1']."/";
+				$base = $_SERVER['HTTP_HOST']."/".$raiz[1]."/";
 				$pegaPasta = "/".$raiz[1]."/admin";
 
 				

@@ -145,9 +145,10 @@ $css = '';
             <td background="img/bg_cabecalho.jpg">&nbsp;</td>
         </tr>
         <tr>
+            <!-- verifica se o admin está logado, se sim renderiza o menu se não volta pra pagina de login -->
             <?php if (isset($_SESSION['nome_adm'])) { ?>
                 <td height="39" colspan="5" align="center" background="img/bg_menu.jpg" class="menu_superior">
-
+                    
                     <!-- ################ CRIA MENU PRINCIPAL ############## -->
 
                     <div id="menu">
@@ -157,7 +158,8 @@ $css = '';
                                 $pula_menu_principal = array();
                                 $aberto_ul = array();
                                 $menu_li = array();
-                                $modulos = $_SESSION['pages'];
+                                $modulos = $_SESSION['pages']; //modulos da tabela modulos do banco de dados
+                                
                                 @session_write_close();
                                 if (count($modulos) < 1) {
                                     echo "<span style='color:#FFFFFF; valign:bottom;'>NÃO EXISTE PERMISSÃO DE MENU PARA ESTE USUÁRIO. <br /> Para inserir permissões, faça login como administrador e entre no menu Usuario->Editar.</span>";

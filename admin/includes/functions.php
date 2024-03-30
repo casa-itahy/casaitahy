@@ -60,6 +60,13 @@ function getStatusAtributo($atributos_itens,$atributo_txt){
     return $achou;
 }
 
+function atualizarVariavel($nomeVariavel, $valor) {
 
+	// Gere um script PHP que atualize a variável com o valor fornecido
+    $script = "<?php \$$nomeVariavel = $valor; ?>";
+    
+    // Retorne o script gerado
+    return $script;
+}
 
 ?>
