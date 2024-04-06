@@ -16,11 +16,17 @@ session_write_close();
 		$getBuscar = $_GET['buscar'];
 	}
 
+	if(isset($_GET['t'])) {
+		$t = $_GET['t'];
+	}
 
+	if(isset($_GET['idEdit'])) {
+		$idEdit = $_GET['idEdit'];
+	}
 
-        $t = $_GET[t];
-		$idEdit = $_GET[idEdit];
-		$tipoSelect = $_GET[tipoSelect];
+	if(isset($_GET['tipoSelect'])) {
+		$tipoSelect = $_GET['tipoSelect'];
+	}
 
         switch($t) {
                 case 1:
@@ -160,8 +166,8 @@ if(isset($_POST['v'])){
     $id = $_POST['id'];
     $v = $_POST['v'];
 }else{
-    $id = $_GET[id];
-    $v = $_GET[v];
+    $id = $_GET['id'];
+    $v = $_GET['v'];
 }
 
         $valores = explode('-',$id);
