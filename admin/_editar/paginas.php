@@ -11,6 +11,7 @@ $id_old = $id;
 
 $valores = explode('-', $id);
 
+//verifica se é uma pagina filha ou nao
 if (isset($valores[1])) {
     $pai = $valores[0];
     $filho = $valores[1];
@@ -53,7 +54,6 @@ $sql = "(SELECT i.nome, i.sigla, csi.pagina_id,csi.titulo,csi.title,csi.metad,cs
 
 $dados_idioma = query($sql);
 
-
 if ($user_id == 1) {
     $sql = "SELECT id, titulo, indice,pag_tab_id FROM
             modulos WHERE status=1 AND status_conteudo_simples=1    
@@ -70,11 +70,13 @@ if ($user_id == 1) {
                 ORDER BY modu.indice";//11 = PAGINAS - 5=CAPA DO SITE
 }
 
+//tipos de páginas
 $tipos = query($sql);
 
 
-$sql = "SELECT id,pag_tab_nome FROM modulos WHERE id=11";
+$sql = "SELECT id,pag_tab_nome,pag_tab_id FROM modulos WHERE id=11";
 
+//modulo
 $nivel = query($sql);
 
 $atributos_itens = getAtributosItens(11);
@@ -90,7 +92,7 @@ $titulo = htmlspecialchars($dados[0]['titulo']);
 <form action="_update/paginas.php" enctype="multipart/form-data" method="post" id="form">
     <input type="hidden" id="tabela" name="tabela" value="paginas">
     <input type="hidden" id="id" name="id" value="<?php echo $id; ?>">
-    <input type="hidden" id="pag" name="pag" value="1">
+    <input type="hidden" id="pag" name="pag" value="<?php echo $paginas['pag_tab_id']; ?>">
     <input type="file" name="fileupload" id="fileupload" style="display: none;" />
 
     <table width="950" border="0" align="center" cellpadding="2" cellspacing="2">
@@ -193,7 +195,8 @@ $titulo = htmlspecialchars($dados[0]['titulo']);
         //########### VERIFICA O STATUS DO ATRIBUTO ###################
         $ok = getStatusAtributo($atributos_itens, 'sub_pagina');
         if ($ok != false) {
-           //pr($nivel);
+
+            //essa parte está quebrada, mas tbm nao tem muito sentido pois o $nivel sempre será paginas pois o id está fixo 11 na query
             if ($nivel[0]['pag_tab_nome'] != 'paginas') {
                 ?>
 
@@ -291,6 +294,8 @@ $titulo = htmlspecialchars($dados[0]['titulo']);
             <?php
             }
         }
+
+        //entender o pq o sub titulo so deve aparecer para esses id mencionados
         if ($dados[0]['id'] == 6 or $dados[0]['id'] == 3 or $dados[0]['id'] == 2 or $dados[0]['id'] == 4 or $dados[0]['id'] == 5 or $dados[0]['id'] == 23 or $dados[0]['id'] == 24) { ?>
             <tr>
                 <td class="titulo_noticias">
@@ -305,7 +310,7 @@ $titulo = htmlspecialchars($dados[0]['titulo']);
         //########### VERIFICA O STATUS DO ATRIBUTO ###################
         $ok = getStatusAtributo($atributos_itens, 'imagem');
         if ($ok != false) {
-            if ($dados[0]['tipo'] == 11 or $id == 7 or $id == 7 or $id == 9 or $id == 15 or $id == 16 or $id == 17 or $id == 24) {
+            if ($dados[0]['tipo'] == 11 or $dados[0]['tipo'] == 5 or $id == 7 or $id == 7 or $id == 9 or $id == 15 or $id == 16 or $id == 17 or $id == 24) {
                 ?>
                 <tr>
                     <td class="titulo_noticias">
@@ -315,7 +320,7 @@ $titulo = htmlspecialchars($dados[0]['titulo']);
                         <?php
                         $imagem = $dados[0]['imagem'];
                         $caminho = "imagens/paginas/thumb_" . $imagem;
-                        if ($imagem != "") {
+                        if ($imagem != "" && $caminho!="imagens/paginas/thumb_") {
                             echo "<img src='" . $caminho . "' style='max-width: 200px;'><a href='php/apagarImagem.php?pasta=paginas&pag=" . $paginas['pag_tab_id'] . "&id=" . $id . "'>&nbsp;Apagar</a>";
                         } else {
                             ?>

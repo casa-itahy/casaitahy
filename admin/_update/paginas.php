@@ -7,6 +7,7 @@ include("../../php/plugins/seo.php");
 extract($_POST);
 
 $idiomas = query("SELECT * FROM idiomas WHERE status=1");
+//busca a configurações de img do modulo pelo o id do modulo passado pelo form no $pag. Nesse caso o id do modulo é 1
 $modulo = query("SELECT orientacao, tam_principal, tam_thumb FROM modulos WHERE pag_tab_id='$pag'");
 
 $UPimagem = '';
@@ -38,6 +39,16 @@ foreach ($idiomas as $idioma) {
     $title = addslashes($_POST['title' . $sigla]);
     $metad = addslashes($_POST['metad' . $sigla]);
 
+    //verrificar se o link não ira ser duplicado
+    $link = limpaURL($title);
+    $verifica = query("SELECT * FROM links WHERE lin_nome = '$link'");
+
+    //caso exista ja um link igual este, entao será adicionado a data (dia e hora) do cadastro no final deste link
+    if (count($verifica) > 0) {
+        $dia = date("d-h-i");
+        $link = $link . "-" . $dia;
+    }
+
     if (strtolower(trim($sigla)) == 'port') {
         $conn = conecta();
         $sql1 = "UPDATE paginas SET titulo='$titulo', subtitulo='$subtitulo', conteudo='$texto', title='$title', metad='$metad', $UPimagem $UPimagem2 tipo='$tipo', modified=NOW() WHERE id=$oldid ";
@@ -45,7 +56,7 @@ foreach ($idiomas as $idioma) {
         $q = mysqli_query($conn, $sql1);
 
         $tipoPag = query("SELECT * FROM paginas WHERE id=$oldid");
-        $tipoPag = $tipoPag[0]['tipo'];
+        $tipoPag = $tipoPag[0]['tipo']; //5 ou 11
 
         $nomePg = query("SELECT * FROM modulos WHERE id='$tipoPag'");
         $nmPagina = $nomePg[0]['pag_tab_nome'];

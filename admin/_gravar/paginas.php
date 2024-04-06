@@ -20,7 +20,6 @@ $posicao = ultimaPosicao($tabela);
 $posicao = $posicao + 1;
 
 /* Envia a imagem para redimensionamento */
-pr($_FILES['imagem']);
 $imagemUP = isset($_FILES['imagem']) ? $_FILES['imagem'] : "NULL";
 if (!empty($imagemUP['name']) && $imagemUP['error'] == 0) {
     $imagem = gravaImagem($imagemUP, $tabela, $modulo[0]['tam_principal'], $modulo[0]['tam_thumb'], $modulo[0]['orientacao']);
