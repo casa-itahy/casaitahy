@@ -96,6 +96,16 @@ include_once('php/index.php'); ?>
 		  gtag('config', 'AW-310718011');
 		</script>
 
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16456690428"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-16456690428');
+        </script>
+
 </head>
 <body class="<?php echo $pag; echo ($pag != 'home') ? ' pagina-interna' : ''; ?>">
     <?php echo $config['scripts_body']; ?>
