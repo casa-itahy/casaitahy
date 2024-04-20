@@ -3,7 +3,7 @@ include("php/sessao.php");
 session_write_close();
 include_once("includes/functions.php");
 
-$id = $_GET['id'];
+$id = $_GET['id']; //72
 
 $sql = "SELECT * FROM idiomas WHERE status=1 AND sigla!='Port'";
 $idiomas = query($sql);
@@ -27,7 +27,7 @@ $links = query($sql);
 $sql = "SELECT * FROM noticias WHERE id=$id ";
 $dados = query($sql);
 
-$titulo = htmlspecialchars ($dados[0]['titulo']);
+$titulo = htmlspecialchars($dados[0]['titulo']);
 
 $categorias = query("SELECT * FROM categorias_noticias ORDER BY titulo ASC");
 
